@@ -1,0 +1,9 @@
+{
+  "name": "myApp",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.8",
+    "Framework7": "framework7#~1.4.0"
+  }
+}
