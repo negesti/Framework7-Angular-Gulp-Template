@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <title>myApp</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/app.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+
+  <!-- Scripts -->
+  <script type="text/javascript" src="js/app.min.js"></script>
+
+</head>
+<body>
+  <div class="statusbar-overlay"></div>
+  <div class="panel-overlay"></div>
+  <div class="views">
+    <div class="view view-main">
+
+      <!-- Navbar -->
+      <div class="navbar no-border">
+        <div class="navbar-inner">
+          <div class="left"></div>
+          <div class="center sliding">myApp</div>
+          <div class="right"></div>
+        </div>
+        <div class="navbar-inner cached" data-page="detailsPage">
+          <div class="left sliding">
+            <a href="index" class="link back">
+              <i class="icon icon-back"></i><span>Back</span>
+            </a>
+          </div>
+          <div class="center sliding">Detail page</div>
+          <div class="right"></div>
+        </div>
+      </div>
+
+      <!-- Pages -->
+      <div class="pages navbar-through toolbar-through">
+
+        <!-- Page 1 -->
+        <div data-page="index" class="page" >
+          <!-- Page content-->
+          <div class="page-content" ng-controller="IndexPageController">
+            Click <a href="#detailsPage">here</a> to go to page 2
+
+          </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div data-page="detailsPage" class="page cached" ng-controller="DetailPageController">
+          <!-- Page content-->
+          <div class="page-content">
+            This is page 2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
